@@ -29,7 +29,7 @@ namespace GroupDocs.Samples.ImageSignature.WordsFiles
 
             // Set a license if you have one
             handler.SetLicense(@"GroupDocs.Signature3.lic");
-            
+
             // setup Words image signature options
             var options = new WordsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
             // setup coordinates of image
@@ -38,8 +38,8 @@ namespace GroupDocs.Samples.ImageSignature.WordsFiles
             options.Width = 100;
             options.Height = 100;
 
-            // setup document page number
-            options.DocumentPageNumber = 0;
+            // set document page number
+            options.DocumentPageNumber = 1;
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
             

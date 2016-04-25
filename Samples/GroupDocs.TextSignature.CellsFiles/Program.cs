@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
-using GroupDocs.Signature.Handler.Input;
-using GroupDocs.Signature.Handler.Output;
 
 namespace GroupDocs.Samples.TextSignature.CellsFiles
 {

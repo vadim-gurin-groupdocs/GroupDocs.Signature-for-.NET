@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
 

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
-using GroupDocs.Signature.Handler.Input;
-using GroupDocs.Signature.Handler.Output;
 
 namespace GroupDocs.Samples.TextSignature.PdfFiles
 {
@@ -34,7 +30,7 @@ namespace GroupDocs.Samples.TextSignature.PdfFiles
             handler.SetLicense(@"GroupDocs.Signature3.lic");
 
             // setup PDF image signature options
-            PDFSignTextOptions signOptions = new PDFSignTextOptions(@"Test signature");
+            PdfSignTextOptions signOptions = new PdfSignTextOptions(@"Test signature");
             signOptions.DocumentPageNumber = 1;
             signOptions.Left = 100;
             signOptions.Top = 0;

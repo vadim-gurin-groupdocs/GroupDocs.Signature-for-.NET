@@ -40,6 +40,9 @@ namespace GroupDocs.Samples.DigitalSignature.PdfFiles
             // instantiating the handler
             SignatureHandler handler = new SignatureHandler(config);
 
+            // Set a license if you have one
+            handler.SetLicense(@"GroupDocs.Signature3.lic");
+
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
             // sign document

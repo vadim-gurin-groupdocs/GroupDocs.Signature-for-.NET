@@ -17,18 +17,18 @@ namespace GroupDocs.Samples.DigitalSignature.WordsFiles
             string outputPath = Path.Combine(rootPath, @"Output");
             string imagesPath = Path.Combine(rootPath, @"Images");
 
-            WordSignDigitalOptions wordSignatureDigitalOptions = new WordSignDigitalOptions(Path.Combine(storagePath, @"a.pfx"));
+            WordsSignDigitalOptions signOptions = new WordsSignDigitalOptions(Path.Combine(storagePath, @"a.pfx"));
             // setup coordinates of image
-            wordSignatureDigitalOptions.Left = 10;
-            wordSignatureDigitalOptions.Top = 10;
-            wordSignatureDigitalOptions.Width = 100;
-            wordSignatureDigitalOptions.Height = 100;
+            signOptions.Left = 10;
+            signOptions.Top = 10;
+            signOptions.Width = 100;
+            signOptions.Height = 100;
 
             // setup document page number
-            wordSignatureDigitalOptions.DocumentPageNumber = 1;
+            signOptions.DocumentPageNumber = 1;
 
             // setup document password if required
-            wordSignatureDigitalOptions.Password = "1234567890";
+            signOptions.Password = "1234567890";
 
             // setup configuration
             SignatureConfig config = new SignatureConfig()
@@ -40,8 +40,12 @@ namespace GroupDocs.Samples.DigitalSignature.WordsFiles
             // instantiating the handler
             SignatureHandler handler = new SignatureHandler(config);
 
+            // Set a license if you have one
+            handler.SetLicense(@"GroupDocs.Signature3.lic");
+
+            SaveOptions saveOptions = new SaveOptions(OutputType.String);
             // sign document
-            string fileName = handler.Sign<string>(@"test.docx", wordSignatureDigitalOptions);
+            string fileName = handler.Sign<string>(@"test.docx", signOptions, saveOptions);
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);
         }
     }

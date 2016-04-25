@@ -39,7 +39,7 @@ namespace GroupDocs.Samples.ImageSignature.PowerPointFiles
             options.Height = 100;
 
             // setup document page number
-            options.DocumentPageNumber = 0;
+            options.DocumentPageNumber = 1;
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
