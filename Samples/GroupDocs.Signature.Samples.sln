@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Samples.TextSigna
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Samples.TextSignature.PdfFiles", "GroupDocs.TextSignature.PdfFiles\GroupDocs.Samples.TextSignature.PdfFiles.csproj", "{04993293-7CE1-43EF-AE17-DFA20A484F62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Samples.CustomStorage.Signature", "GroupDocs.CustomStorage.Signature\GroupDocs.Samples.CustomStorage.Signature.csproj", "{94D0EE31-3606-41EA-B5DA-E1CAABC33387}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{04993293-7CE1-43EF-AE17-DFA20A484F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04993293-7CE1-43EF-AE17-DFA20A484F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04993293-7CE1-43EF-AE17-DFA20A484F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D0EE31-3606-41EA-B5DA-E1CAABC33387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D0EE31-3606-41EA-B5DA-E1CAABC33387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D0EE31-3606-41EA-B5DA-E1CAABC33387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D0EE31-3606-41EA-B5DA-E1CAABC33387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
