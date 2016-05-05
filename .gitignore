@@ -21,3 +21,6 @@ Samples/GroupDocs.TextSignature.PowerPointFiles/bin
 Samples/GroupDocs.TextSignature.PowerPointFiles/obj
 Samples/GroupDocs.TextSignature.WordsFiles/bin
 Samples/GroupDocs.TextSignature.WordsFiles/obj
+Samples/GroupDocs.CustomStorage.Signature/bin
+Samples/GroupDocs.CustomStorage.Signature/obj
+Samples/GroupDocs.CustomStorage.Signature/packages 

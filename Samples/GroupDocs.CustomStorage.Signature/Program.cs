@@ -12,6 +12,8 @@ namespace GroupDocs.Samples.CustomStorage.Signature
                               "and create a file named '{0}' in a container named 'testbucket'", fileName);
 
             CustomStorageSample customStorageSample = new CustomStorageSample();
+            customStorageSample.CustomInputHandlerTest(fileName);
+            customStorageSample.CustomOutputHandlerTest(fileName);
             customStorageSample.CustomStorageTests(fileName);
         }
     }

@@ -26,7 +26,6 @@ namespace GroupDocs.Samples.CustomStorage.Signature.Azure
             TimeSpan? defTimeout = _remoteStorage.DefaultRequestOptions.ServerTimeout;
             _remoteStorage.DefaultRequestOptions.ServerTimeout = TimeSpan.FromSeconds(10);
 
-            // validate account
             CloudBlobContainer container = _remoteStorage.GetContainerReference(containerName);
             container.CreateIfNotExists();
 
