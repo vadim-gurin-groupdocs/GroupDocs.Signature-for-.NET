@@ -29,7 +29,7 @@ namespace GroupDocs.Samples.TextSignature.PdfFiles
             // Set a license if you have one
             handler.SetLicense(@"GroupDocs.Signature3.lic");
 
-            // setup PDF image signature options
+            // set up PDF image signature options
             PdfSignTextOptions signOptions = new PdfSignTextOptions(@"Test signature");
             signOptions.DocumentPageNumber = 1;
             signOptions.Left = 100;

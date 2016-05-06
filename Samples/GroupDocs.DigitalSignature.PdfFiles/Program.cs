@@ -16,7 +16,7 @@ namespace GroupDocs.Samples.DigitalSignature.PdfFiles
             string imagesPath = Path.Combine(rootPath, @"Images");
 
             PdfSignDigitalOptions pdfDigitalOptions = new PdfSignDigitalOptions(Path.Combine(storagePath, @"a.pfx"));
-            // setup coordinates of image
+            // set coordinates of image
             pdfDigitalOptions.Left = 10;
             pdfDigitalOptions.Top = 10;
             pdfDigitalOptions.Width = 100;
@@ -24,13 +24,13 @@ namespace GroupDocs.Samples.DigitalSignature.PdfFiles
 
             pdfDigitalOptions.ImageFileName = "Autograph_of_Benjamin_Franklin.png";
 
-            // setup document page number
+            // set document page number
             pdfDigitalOptions.DocumentPageNumber = 1;
 
-            // setup document password if required
+            // set document password if required
             pdfDigitalOptions.Password = "1234567890";
 
-            // setup configuration
+            // set up configuration
             SignatureConfig config = new SignatureConfig()
             {
                 StoragePath = storagePath,

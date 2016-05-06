@@ -35,16 +35,14 @@ namespace GroupDocs.Samples.ImageSignature.CellsFiles
 
             // setup Cells image signature options
             var cellsOptions = new CellsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
-            // setup coordinates of image
+            // set coordinates of image
             cellsOptions.Left = 10;
             cellsOptions.Top = 10;
             cellsOptions.Width = 100;
             cellsOptions.Height = 100;
 
-            // setup document page number
+            // set document page number
             cellsOptions.SheetNumber = 1;
-            cellsOptions.HorizontalAlignment = HorizontalAlignment.Right;
-            cellsOptions.VerticalAlignment = VerticalAlignment.Bottom;
             cellsOptions.ColumnNumber = 0;
             cellsOptions.RowNumber = 5;
             cellsOptions.SignAllPages = true;

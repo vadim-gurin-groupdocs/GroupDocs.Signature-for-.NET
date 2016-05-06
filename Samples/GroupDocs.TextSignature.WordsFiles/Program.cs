@@ -30,7 +30,7 @@ namespace GroupDocs.Samples.TextSignature.WordsFiles
             // setup Words text signature options
             var options = new WordsSignTextOptions();
             
-            // setup the signature text, font family name and other properties
+            // set the signature text, font family name and other properties
             options.Text = "Test signature";
             options.Left = 50;
             options.Top = 300;

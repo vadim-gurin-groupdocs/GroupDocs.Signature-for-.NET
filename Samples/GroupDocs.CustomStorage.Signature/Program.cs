@@ -8,14 +8,14 @@ namespace GroupDocs.Samples.CustomStorage.Signature
         {
             string fileName = @"candy.pdf";
             Console.WriteLine("In order to run this sample, you have to " +
-                              "start the Microsoft Azure Storage Emulator");
+                              "start the Microsoft Azure Storage Emulator locally");
 
             CustomStorageSample customStorageSample = new CustomStorageSample();
             // upload a local test file to Microsoft Azure Storage Emulator
             customStorageSample.UploadTestFile(fileName);
             customStorageSample.CustomInputHandlerTest(fileName);
             customStorageSample.CustomOutputHandlerTest(fileName);
-            customStorageSample.CustomStorageTests(fileName);
+            customStorageSample.CustomStorageTest(fileName);
         }
     }
 }

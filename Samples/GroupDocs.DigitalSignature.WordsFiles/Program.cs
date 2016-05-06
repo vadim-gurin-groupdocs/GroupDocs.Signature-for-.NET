@@ -24,10 +24,10 @@ namespace GroupDocs.Samples.DigitalSignature.WordsFiles
             signOptions.Width = 100;
             signOptions.Height = 100;
 
-            // setup document page number
+            // set document page number
             signOptions.DocumentPageNumber = 1;
 
-            // setup document password if required
+            // set document password if required
             signOptions.Password = "1234567890";
 
             // setup configuration

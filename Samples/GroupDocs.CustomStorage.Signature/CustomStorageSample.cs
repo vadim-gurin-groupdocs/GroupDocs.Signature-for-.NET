@@ -77,7 +77,7 @@ namespace GroupDocs.Samples.CustomStorage.Signature
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);
         }
 
-        public void CustomStorageTests(string inputFileName)
+        public void CustomStorageTest(string inputFileName)
         {
             SignatureConfig config = new SignatureConfig();
             string rootPath = Path.GetFullPath(@"..\..\");
