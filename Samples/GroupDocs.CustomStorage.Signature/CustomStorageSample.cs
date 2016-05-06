@@ -105,9 +105,21 @@ namespace GroupDocs.Samples.CustomStorage.Signature
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);
         }
 
-        public void UploadTestFile()
+        public void UploadTestFile(string inputFileName)
         {
+            string rootPath = Path.GetFullPath(@"..\..\");
+            string storagePath = Path.Combine(rootPath, @"Storage");
 
+            IOutputDataHandler customOutputStorageProvider = new SampleAzureOutputDataHandler(
+                DevStorageEmulatorUrl, DevStorageEmulatorAccountName, DevStorageEmulatorAccountKey, "testbucket");
+            using (Stream blobStream = customOutputStorageProvider.CreateFile(inputFileName))
+            {
+                byte[] fileBytes = File.ReadAllBytes(Path.Combine(storagePath, inputFileName));
+                using (MemoryStream inputStream = new MemoryStream(fileBytes))
+                {
+                    inputStream.CopyTo(blobStream);
+                }
+            }
         }
     }
 }
