@@ -1,12 +1,9 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
-using GroupDocs.Signature.Handler.Input;
-using GroupDocs.Signature.Handler.Output;
+using GroupDocs.Signature;
 
 namespace GroupDocs.Samples.ImageSignature.CellsFiles
 {
@@ -31,7 +28,8 @@ namespace GroupDocs.Samples.ImageSignature.CellsFiles
             SignatureHandler handler = new SignatureHandler(config);
 
             // Set a license if you have one
-            handler.SetLicense(@"GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // setup Cells image signature options
             var cellsOptions = new CellsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");

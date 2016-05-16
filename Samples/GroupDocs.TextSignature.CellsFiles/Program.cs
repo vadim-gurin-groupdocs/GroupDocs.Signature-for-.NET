@@ -3,6 +3,7 @@ using System.IO;
 using GroupDocs.Signature.Config;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
+using GroupDocs.Signature;
 
 namespace GroupDocs.Samples.TextSignature.CellsFiles
 {
@@ -39,7 +40,8 @@ namespace GroupDocs.Samples.TextSignature.CellsFiles
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
             // Set a license if you have one
-            handler.SetLicense(@"GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // sign the document
             string fileName = handler.Sign<string>(@"test.xlsx", cellsOptions, saveOptions);

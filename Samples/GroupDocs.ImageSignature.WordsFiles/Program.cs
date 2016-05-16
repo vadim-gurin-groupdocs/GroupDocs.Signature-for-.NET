@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
+using GroupDocs.Signature;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
 
@@ -28,7 +28,8 @@ namespace GroupDocs.Samples.ImageSignature.WordsFiles
             SignatureHandler handler = new SignatureHandler(config);
 
             // Set a license if you have one
-            handler.SetLicense(@"GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // setup Words image signature options
             var options = new WordsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");

@@ -3,6 +3,7 @@ using System.IO;
 using GroupDocs.Signature.Config;
 using GroupDocs.Signature.Handler;
 using GroupDocs.Signature.Options;
+using GroupDocs.Signature;
 
 namespace GroupDocs.Samples.ImageSignature.PdfFiles
 {
@@ -30,10 +31,13 @@ namespace GroupDocs.Samples.ImageSignature.PdfFiles
             PdfSignImageOptions options = new PdfSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
             options.DocumentPageNumber = 1;
             options.Top = 500;
-            options.SignAllPages = true;
+            //options.SignAllPages = true;
+            options.Width = 20;
+            options.Height = 10;
 
             // Set a license if you have one
-            handler.SetLicense(@"GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
             // sign the document

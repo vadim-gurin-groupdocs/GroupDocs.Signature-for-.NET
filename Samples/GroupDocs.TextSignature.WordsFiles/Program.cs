@@ -4,6 +4,7 @@ using System.IO;
 using GroupDocs.Signature.Config;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
+using GroupDocs.Signature;
 
 namespace GroupDocs.Samples.TextSignature.WordsFiles
 {
@@ -44,7 +45,8 @@ namespace GroupDocs.Samples.TextSignature.WordsFiles
             saveOptions.OutputType = OutputType.String;
 
             // Set a license if you have one
-            handler.SetLicense(@"GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // sign the documents
             string fileName;

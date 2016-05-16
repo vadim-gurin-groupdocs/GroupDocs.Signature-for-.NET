@@ -1,4 +1,5 @@
 ﻿using GroupDocs.Signature.Handler;
+using GroupDocs.Signature;
 
 namespace GroupDocs.Samples.CustomStorage.Signature
 {
@@ -6,8 +7,8 @@ namespace GroupDocs.Samples.CustomStorage.Signature
     {
         internal static void SetSignatureLicense(SignatureHandler handler)
         {
-            //handler.SetLicense(@"GroupDocs.Signature3.lic");
-            handler.SetLicense(@"d:\temp\SignatureLicense\GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
         }
     }
 }

@@ -2,9 +2,8 @@
 using System.IO;
 using GroupDocs.Signature.Config;
 using GroupDocs.Signature.Handler;
-using GroupDocs.Signature.Handler.Input;
-using GroupDocs.Signature.Handler.Output;
 using GroupDocs.Signature.Options;
+using GroupDocs.Signature;
 
 namespace GroupDocs.Samples.DigitalSignature.WordsFiles
 {
@@ -41,7 +40,8 @@ namespace GroupDocs.Samples.DigitalSignature.WordsFiles
             SignatureHandler handler = new SignatureHandler(config);
 
             // Set a license if you have one
-            handler.SetLicense(@"GroupDocs.Signature3.lic");
+            License license = new License();
+            license.SetLicense(@"GroupDocs.Signature3.lic");
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
             // sign document
