@@ -79,6 +79,7 @@
     <Compile Include="Azure\SampleAzureOutputDataHandler.cs" />
     <Compile Include="CustomStorageSample.cs" />
     <Compile Include="DigitalSignature.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="ImageSignature.cs" />
     <Compile Include="LicenseSetter.cs" />
     <Compile Include="Program.cs" />

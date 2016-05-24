@@ -1,13 +1,8 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
 
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
-using GroupDocs.Signature.Handler.Input;
-using GroupDocs.Signature.Handler.Output;
 
 namespace GroupDocs.Samples.Common
 {
@@ -15,18 +10,9 @@ namespace GroupDocs.Samples.Common
     {
         public static void CellsDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
-            var imagePath = @"c:\Aspose\Test\Images";
-            var certificatesPath = @"c:\Aspose\Test\Certificates";
-            // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                ImagesPath = imagePath,
-                OutputPath = outputPath,
-                CertificatesPath = certificatesPath
-            };
+            // set up Signature configuration
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup digital signature options
@@ -39,18 +25,9 @@ namespace GroupDocs.Samples.Common
         }
         public static void PDFDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
-            var imagePath = @"c:\Aspose\Test\Images";
-            var certificatesPath = @"c:\Aspose\Test\Certificates";
-            // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                ImagesPath = imagePath,
-                OutputPath = outputPath,
-                CertificatesPath = certificatesPath
-            };
+            // set up Signature configuration
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup digital signature options
@@ -68,18 +45,9 @@ namespace GroupDocs.Samples.Common
         }
         public static void SlidesDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
-            var imagePath = @"c:\Aspose\Test\Images";
-            var certificatesPath = @"c:\Aspose\Test\Certificates";
-            // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                ImagesPath = imagePath,
-                OutputPath = outputPath,
-                CertificatesPath = certificatesPath
-            };
+            // set up Signature configuration
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup digital signature options
@@ -96,18 +64,9 @@ namespace GroupDocs.Samples.Common
         }
         public static void WordsDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
-            var imagePath = @"c:\Aspose\Test\Images";
-            var certificatesPath = @"c:\Aspose\Test\Certificates";
-            // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                ImagesPath = imagePath,
-                OutputPath = outputPath,
-                CertificatesPath = certificatesPath
-            };
+            // set up Signature configuration
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup digital signature options

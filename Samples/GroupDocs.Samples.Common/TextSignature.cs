@@ -1,13 +1,8 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
 
 using GroupDocs.Signature.Config;
-using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
-using GroupDocs.Signature.Handler.Input;
-using GroupDocs.Signature.Handler.Output;
 
 namespace GroupDocs.Samples.Common
 {
@@ -15,17 +10,11 @@ namespace GroupDocs.Samples.Common
     {
         public static void CellsDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
-            // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                OutputPath = outputPath
-            };
+            // set up Signature configuration
+            SignatureConfig signConfig = Helper.GetPaths();
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
-            // setup text signature options
+            // set text signature options
             var signOptions = new CellsSignTextOptions("John Smith");
             // text position
             signOptions.RowNumber = 10;
@@ -38,14 +27,9 @@ namespace GroupDocs.Samples.Common
         }
         public static void PDFDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
             // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                OutputPath = outputPath
-            };
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup text signature options
@@ -60,14 +44,9 @@ namespace GroupDocs.Samples.Common
         }
         public static void SlidesDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
             // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                OutputPath = outputPath
-            };
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup image signature options with relative path - image file stores in config.ImagesPath folder
@@ -83,14 +62,9 @@ namespace GroupDocs.Samples.Common
         }
         public static void WordsDocument()
         {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
             // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                OutputPath = outputPath
-            };
+            SignatureConfig signConfig = Helper.GetPaths();
+
             // instantiating the conversion handler
             var handler = new SignatureHandler(signConfig);
             // setup image signature options with relative path - image file stores in config.ImagesPath folder

@@ -13,51 +13,6 @@ namespace GroupDocs.Samples.Common
 {
     class Program
     {
-        // output file should be at same location
-        static void f1()
-        {
-            // instantiating the signature handler without Signature Config object
-            var handler = new SignatureHandler();
-            // setup image signature options
-            var signOptions = new PdfSignImageOptions(@"C:\Aspose\signature.jpg");
-            // sign document with image
-            var signedPath = handler.Sign<string>(@"C:\Aspose\test.pdf", signOptions, new SaveOptions { OutputType = OutputType.String });
-            Console.WriteLine("Signed file path is: " + signedPath);
-        }
-        static void f2()
-        {
-            var storagePath = @"c:\Aspose\Test\Storage";
-            var outputPath = @"c:\Aspose\Test\Output";
-            var imagesPath = @"c:\Aspose\Test\Images";
-            // setup Signature configuration
-            var signConfig = new SignatureConfig
-            {
-                StoragePath = storagePath,
-                OutputPath = outputPath,
-                ImagesPath = imagesPath
-            };
-            // instantiating the conversion handler
-            var handler = new SignatureHandler(signConfig);
-            // setup image signature options with relative path - image file stores in config.ImagesPath folder
-            var signOptions = new PdfSignImageOptions("signature.jpg");
-            // sign document
-            var signedPath = handler.Sign<string>("test.pdf", signOptions, new SaveOptions { OutputType = OutputType.String });
-            Console.WriteLine("Signed file path is: " + signedPath);
-        }
-        static void f3()
-        {
-            // instantiating the signature handler without Signature Config object
-            var handler = new SignatureHandler();
-            // setup image signature options
-            var signOptions = new PdfSignImageOptions(@"http://groupdocs.com/images/banner/carousel2/conversion.png");
-            // save options
-            var saveOptions = new SaveOptions(OutputType.String);
-            // sign document with image
-            var signedPath = handler.Sign<string>("https://www.adobe.com/content/dam/Adobe/en/feature-details/acrobatpro/pdfs/combine-multiple-documents-into-one-pdf-file.pdf", signOptions, saveOptions);
-            Console.WriteLine("Signed file path is: " + signedPath);
-        }
-
-        
         static void Main(string[] args)
         {
             string fileName = @"candy.pdf";
