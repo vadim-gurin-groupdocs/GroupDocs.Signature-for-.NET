@@ -2,6 +2,7 @@
 using System.IO;
 using GroupDocs.Signature.Config;
 using GroupDocs.Signature;
+using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
 
@@ -32,20 +33,28 @@ namespace GroupDocs.Samples.ImageSignature.WordsFiles
             license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // setup Words image signature options
-            var options = new WordsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
+            var wordsSignImageOptions = new WordsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
             // setup coordinates of image
-            options.Left = 10;
-            options.Top = 300;
-            options.Width = 100;
-            options.Height = 100;
+            wordsSignImageOptions.Left = 10;
+            wordsSignImageOptions.Top = 300;
+            wordsSignImageOptions.Width = 100;
+            wordsSignImageOptions.Height = 100;
 
             // set document page number
-            options.DocumentPageNumber = 1;
+            wordsSignImageOptions.DocumentPageNumber = 1;
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
-            
+
+            wordsSignImageOptions.HorizontalAlignment = HorizontalAlignment.Right;
+            wordsSignImageOptions.VerticalAlignment = VerticalAlignment.Bottom;
+            wordsSignImageOptions.Margin = new Padding()
+            {
+                Right = 100,
+                Bottom = 200
+            };
+
             // sign the document
-            string fileName = handler.Sign<string>(@"test.docx", options, saveOptions);
+            string fileName = handler.Sign<string>(@"test.docx", wordsSignImageOptions, saveOptions);
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);
         }
     }
