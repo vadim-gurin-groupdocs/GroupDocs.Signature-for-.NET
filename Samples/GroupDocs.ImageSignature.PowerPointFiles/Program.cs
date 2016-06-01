@@ -2,6 +2,7 @@
 using System.IO;
 using GroupDocs.Signature.Config;
 using GroupDocs.Signature;
+using GroupDocs.Signature.Domain;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
 
@@ -32,15 +33,23 @@ namespace GroupDocs.Samples.ImageSignature.PowerPointFiles
             license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // setup Words image signature options
-            var options = new SlidesSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
+            SlidesSignImageOptions slidesImageSignatureOptions = new SlidesSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
             // setup coordinates of image
-            options.Left = 10;
-            options.Top = 10;
-            options.Width = 100;
-            options.Height = 100;
+            slidesImageSignatureOptions.Left = 10;
+            slidesImageSignatureOptions.Top = 10;
+            slidesImageSignatureOptions.Width = 100;
+            slidesImageSignatureOptions.Height = 100;
 
             // setup document page number
-            options.DocumentPageNumber = 1;
+            slidesImageSignatureOptions.DocumentPageNumber = 1;
+
+            slidesImageSignatureOptions.HorizontalAlignment = HorizontalAlignment.Right;
+            slidesImageSignatureOptions.VerticalAlignment = VerticalAlignment.Bottom;
+            slidesImageSignatureOptions.Margin = new Padding()
+            {
+                Right = 50,
+                Bottom = 50
+            };
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
