@@ -4,6 +4,7 @@ using GroupDocs.Signature.Config;
 using GroupDocs.Signature.Options;
 using GroupDocs.Signature.Handler;
 using GroupDocs.Signature;
+using GroupDocs.Signature.Domain;
 
 namespace GroupDocs.Samples.ImageSignature.CellsFiles
 {
@@ -32,23 +33,33 @@ namespace GroupDocs.Samples.ImageSignature.CellsFiles
             license.SetLicense(@"GroupDocs.Signature3.lic");
 
             // setup Cells image signature options
-            var cellsOptions = new CellsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
+            var cellsImageSignatureOptions = new CellsSignImageOptions(@"Autograph_of_Benjamin_Franklin.png");
             // set coordinates of image
-            cellsOptions.Left = 10;
-            cellsOptions.Top = 10;
-            cellsOptions.Width = 100;
-            cellsOptions.Height = 100;
+            cellsImageSignatureOptions.Left = 10;
+            cellsImageSignatureOptions.Top = 10;
+            cellsImageSignatureOptions.Width = 100;
+            cellsImageSignatureOptions.Height = 100;
 
             // set document page number
-            cellsOptions.SheetNumber = 1;
-            cellsOptions.ColumnNumber = 0;
-            cellsOptions.RowNumber = 5;
-            cellsOptions.SignAllPages = true;
+            cellsImageSignatureOptions.SheetNumber = 1;
+            cellsImageSignatureOptions.ColumnNumber = 0;
+            cellsImageSignatureOptions.RowNumber = 5;
+            cellsImageSignatureOptions.SignAllPages = false;
+
+            cellsImageSignatureOptions.HorizontalAlignment = HorizontalAlignment.Right;
+            cellsImageSignatureOptions.VerticalAlignment = VerticalAlignment.Bottom;
+            cellsImageSignatureOptions.Margin = new Padding()
+            {
+                Left = 0,
+                Top = 0,
+                Right = 0,
+                Bottom = 0
+            };
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
             // sign the document
-            string fileName = handler.Sign<string>(@"test.xlsx", cellsOptions, saveOptions);
+            string fileName = handler.Sign<string>(@"test.xlsx", cellsImageSignatureOptions, saveOptions);
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);
         }
     }
