@@ -54,7 +54,7 @@ namespace GroupDocs.Samples.ImageSignature.PowerPointFiles
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
             // sign the document
-            string fileName = handler.Sign<string>(@"GroupDocs_Demo_2_pages.pptx", options, saveOptions);
+            string fileName = handler.Sign<string>(@"GroupDocs_Demo_2_pages.pptx", slidesImageSignatureOptions, saveOptions);
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);
         }
     }
