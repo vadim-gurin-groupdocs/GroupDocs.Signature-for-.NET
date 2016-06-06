@@ -45,14 +45,6 @@ namespace GroupDocs.Samples.ImageSignature.WordsFiles
 
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
-            wordsSignImageOptions.HorizontalAlignment = HorizontalAlignment.Right;
-            wordsSignImageOptions.VerticalAlignment = VerticalAlignment.Bottom;
-            wordsSignImageOptions.Margin = new Padding()
-            {
-                Right = 100,
-                Bottom = 200
-            };
-
             // sign the document
             string fileName = handler.Sign<string>(@"test.docx", wordsSignImageOptions, saveOptions);
             Console.WriteLine("Document signed successfully. The output filename: {0}", fileName);

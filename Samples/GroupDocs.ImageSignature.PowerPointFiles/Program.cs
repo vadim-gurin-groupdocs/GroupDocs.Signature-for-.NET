@@ -43,14 +43,6 @@ namespace GroupDocs.Samples.ImageSignature.PowerPointFiles
             // setup document page number
             slidesImageSignatureOptions.DocumentPageNumber = 1;
 
-            slidesImageSignatureOptions.HorizontalAlignment = HorizontalAlignment.Right;
-            slidesImageSignatureOptions.VerticalAlignment = VerticalAlignment.Bottom;
-            slidesImageSignatureOptions.Margin = new Padding()
-            {
-                Right = 50,
-                Bottom = 50
-            };
-
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
             // sign the document
