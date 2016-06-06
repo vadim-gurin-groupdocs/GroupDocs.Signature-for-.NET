@@ -39,6 +39,14 @@ namespace GroupDocs.Samples.ImageSignature.PdfFiles
             License license = new License();
             license.SetLicense(@"GroupDocs.Signature3.lic");
 
+            pdfImageSignatureOptions.HorizontalAlignment = HorizontalAlignment.Left;
+            pdfImageSignatureOptions.VerticalAlignment = VerticalAlignment.Top;
+            pdfImageSignatureOptions.Margin = new Padding()
+            {
+                Right = 50,
+                Top = 50
+            };
+
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
             // sign the document
             LoadOptions loadOptions = new LoadOptions();
