@@ -45,17 +45,7 @@ namespace GroupDocs.Samples.ImageSignature.CellsFiles
             cellsImageSignatureOptions.ColumnNumber = 0;
             cellsImageSignatureOptions.RowNumber = 5;
             cellsImageSignatureOptions.SignAllPages = false;
-
-            cellsImageSignatureOptions.HorizontalAlignment = HorizontalAlignment.Right;
-            cellsImageSignatureOptions.VerticalAlignment = VerticalAlignment.Bottom;
-            cellsImageSignatureOptions.Margin = new Padding()
-            {
-                Left = 0,
-                Top = 0,
-                Right = 0,
-                Bottom = 0
-            };
-
+            
             SaveOptions saveOptions = new SaveOptions(OutputType.String);
 
             // sign the document
